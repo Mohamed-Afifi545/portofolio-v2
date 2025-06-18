@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "tailwind-scrollbar";
 
 @theme {
   /* breakpoints */
@@ -67,4 +68,10 @@ body {
 /* Swiper css */
 .swiper {
   margin: 0 !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-accent;
 }
