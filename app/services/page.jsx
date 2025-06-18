@@ -59,16 +59,16 @@ export default function Services() {
             Custom <span className="text-accent">Web Solutions</span> To Boost
             Your Business
           </h2>
-          <button className="btn btn-lg btn-accent flex gap-2">
+          <button className=" btn btn-lg btn-accent flex gap-2 cursor-pointer">
             All Services <MdArrowRightAlt className="text-2xl" />
           </button>
         </div>
         <Swiper
           spaceBetween={30}
-          slidesPerView={1}
+          slidesPerView={1.2}
           breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            640: { slidesPerView: 2.2 },
+            1024: { slidesPerView: 3.2 },
           }}
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}

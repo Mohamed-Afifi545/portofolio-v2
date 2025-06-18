@@ -110,14 +110,16 @@ export default function Work() {
                       clickable: true,
                       dynamicBullets: true,
                     }}
+                    slidesPerView={1.1}
+                    spaceBetween={1}
                     className="h-max xl:h-[460px] "
                   >
                     {projects
                       .filter((project) => project.category === category)
                       .map((project) => (
                         <SwiperSlide key={project.id} className="h-full ">
-                          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mx-5">
-                            <div className="w-full max-w-[350px] flex flex-col gap-6 xl:gap-8 xl:pt-6 order-2 xl:order-none ">
+                          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mx-5 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
+                            <div className="w-full max-w-[350px] flex flex-col gap-6 xl:gap-8 xl:pt-6 pl-6 pb-6 order-2 xl:order-none ">
                               <h3 className="h3">{project.title}</h3>
                               <div className="xl:mb-4 max-w-[300px] min-h-[130px] ">
                                 <p className="mb-4">Technologies Used</p>
@@ -136,7 +138,7 @@ export default function Work() {
                               </div>
                               <div className="flex flex-col sm:flex-row gap-4 items-start ">
                                 <Link href={project.link}>
-                                  <button className="btn btn-sm btn-accent flex gap-2 ">
+                                  <button className="btn btn-sm btn-accent flex gap-x-[5px] ">
                                     <MdArrowOutward className="text-lg " />
                                     <span>Live Project</span>
                                   </button>

@@ -10,12 +10,15 @@ export default function SwiperClient({ testimonials }) {
     <Swiper
       modules={[Autoplay]}
       loop={true}
+      slidesPerView={1.3}
+      spaceBetween={14}
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       className="w-full self-center max-w-[310px] md:max-w-[520px] bg-secondary rounded-lg"
     >
       {testimonials.map((testimonial, index) => (
         <SwiperSlide key={index}>
-          <div className="flex px-8 py-6 gap-8">
+          <div className="flex px-8 py-6 gap-8 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
+            {" "}
             <ImQuotesLeft className="hidden xl:flex text-8xl text-accent" />
             <div className="flex flex-col gap-2">
               <p>{testimonial.message}</p>
