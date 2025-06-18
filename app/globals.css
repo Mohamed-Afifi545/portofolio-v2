@@ -24,7 +24,7 @@
 }
 
 body {
-  @apply font-primary bg-primary text-white leading-relaxed;
+  @apply font-primary bg-primary text-white leading-relaxed min-h-[100dvh];
 }
 
 .h1 {
