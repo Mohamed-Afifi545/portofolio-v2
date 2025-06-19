@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
+import { useEffect } from "react";
 
 const projects = [
   {
@@ -79,6 +80,10 @@ const projects = [
 const categories = ["Frontend", "Full-stack"];
 
 export default function Work() {
+  useEffect(() => {
+    document.title = "Work | Mohamed Afifi";
+  }, [document.title]);
+
   return (
     <motion.section
       initial={{

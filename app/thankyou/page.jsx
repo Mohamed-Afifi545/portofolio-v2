@@ -2,8 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function Page() {
+  useEffect(() => {
+    document.title = "Thank You!";
+  }, [document.title]);
+
   return (
     <motion.section
       initial={{

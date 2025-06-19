@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import { Label } from "@/components/ui/label";
@@ -20,6 +20,10 @@ import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import Socials from "@/_components/Socials";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contact | Mohamed Afifi";
+  }, [document.title]);
+
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 

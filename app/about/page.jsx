@@ -10,7 +10,13 @@ import Skills from "@/_components/Skills";
 import Blob from "@/_components/Blob";
 import Socials from "@/_components/Socials";
 
+import { useEffect } from "react";
+
 export default function About() {
+  useEffect(() => {
+    document.title = "About | Mohamed Afifi";
+  }, [document.title]);
+
   return (
     <motion.section
       initial={{

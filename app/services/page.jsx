@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { MdArrowRightAlt, MdOutlineArrowOutward } from "react-icons/md";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const services = [
   {
@@ -34,6 +35,10 @@ const services = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    document.title = "Services | Mohamed Afifi";
+  }, [document.title]);
+
   return (
     <motion.section
       initial={{
