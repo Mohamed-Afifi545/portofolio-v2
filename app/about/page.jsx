@@ -49,7 +49,7 @@ export default function About() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <p>About me</p>
+                <p className="text-xl">About me</p>
               </div>
               <h2 className="h2 mb-6">
                 <span className="text-accent">Mohamed</span> Afifi

@@ -31,7 +31,7 @@ export default function Info() {
           <HiOutlinePhone className="text-2xl mt-1 text-accent" />
           <div>
             <p className="text-lg ">Phone</p>
-            <p>+201061989545</p>
+            <p>+20 1061989545</p>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export default function Info() {
             <p>Cairo, Egypt</p>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 }

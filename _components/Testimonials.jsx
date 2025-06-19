@@ -8,7 +8,7 @@ const testimonials = [
   {
     message:
       "Mohamed's work is exceptional! He transformed our website into a user-friendly platform that has significantly improved our customer engagement.",
-    name: "Sarah Johnson",
+    name: "Salma Yasser",
   },
   {
     message:
@@ -18,12 +18,12 @@ const testimonials = [
   {
     message:
       "I can't recommend Mohamed enough! His expertise in web development and design is top-notch, and he delivered our project ahead of schedule.",
-    name: "Emily Davis",
+    name: "Mostafa Ali",
   },
   {
     message:
       "Mohamed's creativity and technical skills are impressive. He took our vision and turned it into a stunning website that exceeded our expectations.",
-    name: "Michael Brown",
+    name: "Ahmed Ashraf",
   },
 ];
 

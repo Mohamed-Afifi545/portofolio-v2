@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { MdArrowOutward } from "react-icons/md";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
+import { FaWhatsapp } from "react-icons/fa";
 
 import avatarImage from "@/public/assets/avatar.png";
 import Image from "next/image";
 import Socials from "@/_components/Socials";
 import Pattern from "@/_components/Pattern";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -49,23 +51,35 @@ export default function Home() {
             that transform your ideas into seamless, engaging digital
             experiences.
           </p>
-          <button className="btn btn-lg btn-accent mb-16">
+
+          <Link href={"/contact"} className="btn btn-lg btn-accent mb-16">
             <div className="flex items-center gap-3">
               <span>Let's talk</span>
               <MdArrowOutward className="text-xl" />
             </div>
-          </button>
+          </Link>
+
           <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8 mb-12 xl:mb-0">
-            <div className="flex items-center gap-4 text-lg">
+            <Link
+              href="https://wa.me/+201061989545?text="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-lg"
+            >
               <span className="text-accent">
-                <HiOutlinePhone
+                <FaWhatsapp
                   className="text-xl
                 "
                 />
               </span>
               <span>+20 1061989545</span>
-            </div>
-            <div className="flex items-center gap-4 text-lg">
+            </Link>
+            <Link
+              href="mailto:mada2010545@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 text-lg"
+            >
               <span className="text-accent">
                 <HiOutlineMail
                   className="text-xl
@@ -73,7 +87,7 @@ export default function Home() {
                 />
               </span>
               <span>mada2010545@gmail.com</span>
-            </div>
+            </Link>
           </div>
           <Socials
             containerStyles="flex 2xl:flex-col gap-6 xl:hidden 2xl:flex 2xl:absolute 2xl:top-1/2 2xl:right-10 2xl:transform 2xl:translate-x-1/2 2xl:-translate-y-1/2 "
