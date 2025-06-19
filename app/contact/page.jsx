@@ -170,8 +170,9 @@ export default function Contact() {
                     id="message"
                     type="text"
                     name="message"
+                    maxLength={1000}
                     placeholder="Write your message.."
-                    className="min-h-[160px] bg-white/5 border-white/10 focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4 selection:bg-accent placeholder:text-white "
+                    className="xl:max-w-[523px] min-h-[160px] bg-white/5 border-white/10 focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4 selection:bg-accent placeholder:text-white "
                   />
                 </div>
                 <button type="submit" className="btn btn-lg btn-accent ">
