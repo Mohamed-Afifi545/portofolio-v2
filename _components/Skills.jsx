@@ -56,7 +56,7 @@ export default function Skills() {
       <h2 className="h2 mb-8">
         My <span className="text-accent">Skills</span>
       </h2>
-      <div className="flex flex-wrap gap-x-8 gap-y-12 mt-12 max-w-sm xl:max-w-none">
+      <div className="flex flex-wrap gap-x-7 gap-y-11 mt-12 max-w-sm xl:max-w-none">
         {skills.map((skill, index) => (
           <TooltipProvider key={index}>
             <Tooltip>

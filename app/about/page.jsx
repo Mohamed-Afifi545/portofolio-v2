@@ -27,7 +27,7 @@ export default function About() {
       className="h-screen flex items-center"
     >
       <div className="container mx-auto h-[90%] flex flex-col justify-center items-center px-0 ">
-        <div className="flex flex-col xl:flex-row items-center gap-28 w-full h-[680px]">
+        <div className="flex flex-col xl:flex-row items-center gap-28 w-full h-[690px]">
           <div className="hidden flex-col gap-20  xl:flex w-full h-full pt-14 max-w-[430px] relative mt-32 ">
             <Image
               src="/assets/avatar.png"
