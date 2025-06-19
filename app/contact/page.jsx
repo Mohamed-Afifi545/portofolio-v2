@@ -15,8 +15,16 @@ import {
 import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import Socials from "@/_components/Socials";
+import { useRouter } from "next/navigation";
 
 export default function Contact() {
+  const router = useRouter();
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    router.push("/thankyou");
+  }
+
   return (
     <motion.section
       initial={{
@@ -42,8 +50,9 @@ export default function Contact() {
                   Get in <span className="text-accent">Touch</span>
                 </h2>
                 <p className="max-w-[460px]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Doloremque ex.
+                  If you have a project in mind or need any of my services, feel
+                  free to send me a message using the form. I'll get back to you
+                  as soon as possible!
                 </p>
               </div>
               <div className="flex flex-col gap-4 xl:gap-8 mb-6 xl:mb-0">
@@ -73,9 +82,10 @@ export default function Contact() {
             </div>
             <div className="flex-1">
               <form
+                onSubmit={handleSubmit}
                 name="contact"
-                netlify
                 className="flex flex-col gap-6 items-start"
+                data-netlify="true"
               >
                 <div className="flex flex-col xl:flex-row gap-6 w-full ">
                   <div className="w-full  ">
@@ -84,6 +94,7 @@ export default function Contact() {
                     </Label>
                     <Input
                       id="firstname"
+                      type="text"
                       name="firstname"
                       placeholder="First name"
                       required
@@ -95,6 +106,7 @@ export default function Contact() {
                     </Label>
                     <Input
                       id="lastname"
+                      type="text"
                       name="lastname"
                       placeholder="Last name"
                       required
@@ -107,6 +119,7 @@ export default function Contact() {
                   </Label>
                   <Input
                     id="email"
+                    type="email"
                     name="email"
                     placeholder="youremail@gmail.com"
                     required
@@ -116,7 +129,7 @@ export default function Contact() {
                   <Label htmlFor="name">
                     I'm interested in <span className="text-accent">*</span>
                   </Label>
-                  <Select name="service" required>
+                  <Select type="select" name="service" required>
                     <SelectTrigger
                       id="service"
                       className="w-full !h-12 bg-white/5 border-white/10 px-4"
@@ -136,6 +149,7 @@ export default function Contact() {
                   </Label>
                   <Textarea
                     id="message"
+                    type="text"
                     name="message"
                     placeholder="Write your message.."
                     className="min-h-[160px] bg-white/5 border-white/10 focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4 selection:bg-accent placeholder:text-white "
