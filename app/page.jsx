@@ -22,7 +22,7 @@ export default function Home() {
       animate={{
         opacity: 1,
         transition: {
-          delay: 1,
+          delay: 0.2,
           duration: 0.4,
           ease: "easeIn",
         },
