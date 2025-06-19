@@ -13,53 +13,66 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    category: "Frontend",
+    category: "Full-stack",
     title: "The Wild Oasis Website",
-    description: "A modern website for a fictional travel agency.",
     image: "/assets/work/thumb1.png",
     link: "https://wild-oasis-website-afifi.netlify.app",
-    github: "",
-    tech: ["React", "Next.js", "Tailwind CSS"],
+    github: "https://github.com/Mohamed-Afifi545/the-wild-oasis-website",
+    tech: ["React.js", "Next.js", "Tailwind CSS", "Supabase"],
   },
   {
     id: 2,
-    category: "Frontend",
-    title: "The ",
-    description: "A modern website for a fictional travel agency.",
-    image: "/assets/work/thumb1.png",
-    link: "https://the-wild-oasis.com",
-    github: "",
-    tech: ["React", "Next.js", "Tailwind CSS"],
+    category: "Full-stack",
+    title: "The Wild Oasis Dashboard",
+    image: "/assets/work/thumb2.png",
+    link: "https://wild-oasis-afifi.netlify.app",
+    github: "https://github.com/Mohamed-Afifi545/the-wild-oasis",
+    tech: ["React.js", "Tailwind CSS", "Supabase"],
   },
   {
     id: 3,
     category: "Frontend",
-    title: "The Wild ",
-    description: "A modern website for a fictional travel agency.",
-    image: "/assets/work/thumb1.png",
-    link: "https://the-wild-oasis.com",
-    github: "",
-    tech: ["React", "Next.js", "Tailwind CSS"],
+    title: "MG-Builders",
+    image: "/assets/work/thumb3.png",
+    link: "https://mg-builders-v343434.netlify.app",
+    github: "https://github.com/Mohamed-Afifi545/mg-builders",
+    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 4,
-    category: "Full-stack",
-    title: " Oasis Website",
-    description: "A modern website for a fictional travel agency.",
-    image: "/assets/work/thumb1.png",
-    link: "https://the-wild-oasis.com",
-    github: "",
-    tech: ["React", "Next.js", "Tailwind CSS"],
+    category: "Frontend",
+    title: "Forkify",
+    image: "/assets/work/thumb4.png",
+    link: "https://forkify-afifi.netlify.app",
+    github: "https://github.com/Mohamed-Afifi545/forkify",
+    tech: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 5,
-    category: "Full-stack",
-    title: " Website",
-    description: "A modern website for a fictional travel agency.",
-    image: "/assets/work/thumb1.png",
-    link: "https://the-wild-oasis.com",
-    github: "",
-    tech: ["React", "Next.js", "Tailwind CSS"],
+    category: "Frontend",
+    title: "OmniFood",
+    image: "/assets/work/thumb5.png",
+    link: "https://omnifood-afifi.netlify.app",
+    github: "https://github.com/Mohamed-Afifi545/omnifood",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 6,
+    category: "Frontend",
+    title: "Fast Pizza",
+    image: "/assets/work/thumb6.png",
+    link: "https://pizza-afifi.netlify.app/",
+    github: "https://github.com/Mohamed-Afifi545/fast-react-pizza2",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 7,
+    category: "Frontend",
+    title: "Natours",
+    image: "/assets/work/thumb7.png",
+    link: "https://natours-afifi.netlify.app",
+    github: "https://github.com/Mohamed-Afifi545/natours",
+    tech: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
@@ -111,18 +124,18 @@ export default function Work() {
                       dynamicBullets: true,
                     }}
                     slidesPerView={1.1}
-                    spaceBetween={1}
+                    spaceBetween={20}
                     className="h-max xl:h-[460px] "
                   >
                     {projects
                       .filter((project) => project.category === category)
                       .map((project) => (
-                        <SwiperSlide key={project.id} className="h-full ">
-                          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 mx-5 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
-                            <div className="w-full max-w-[350px] flex flex-col gap-6 xl:gap-8 xl:pt-6 pl-6 pb-6 order-2 xl:order-none ">
+                        <SwiperSlide key={project.id} className="h-full">
+                          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
+                            <div className="w-full max-w-[350px] flex flex-col gap-3 xl:gap-5 xl:pt-6 pl-6 pb-6 order-2 xl:order-none justify-between">
                               <h3 className="h3">{project.title}</h3>
-                              <div className="xl:mb-4 max-w-[300px] min-h-[130px] ">
-                                <p className="mb-4">Technologies Used</p>
+                              <div className="xl:mb-2 max-w-[300px] min-h-[130px] ">
+                                <p className="mb-4">Technologies Used:</p>
                                 <ul className="flex flex-wrap gap-4 ">
                                   {project.tech.map((item, index) => {
                                     return (
@@ -137,21 +150,21 @@ export default function Work() {
                                 </ul>
                               </div>
                               <div className="flex flex-col sm:flex-row gap-4 items-start ">
-                                <Link href={project.link}>
+                                <Link href={project.link} target="_blank">
                                   <button className="btn btn-sm btn-accent flex gap-x-[5px] ">
                                     <MdArrowOutward className="text-lg " />
                                     <span>Live Project</span>
                                   </button>
                                 </Link>
-                                <Link href={project.github}>
-                                  <button className="btn btn-sm btn-white flex gap-2 ">
+                                <Link href={project.github} target="_blank">
+                                  <button className="btn btn-sm btn-white flex gap-x-[5px] ">
                                     <FaGithub className="text-lg " />
-                                    <span>Github Repo</span>
+                                    <span>Github Repo.</span>
                                   </button>
                                 </Link>
                               </div>
                             </div>
-                            <div className="w-full h-[200px] md:h-[300px] xl:h-[400px] relative order-1 xl:order-none rounded-lg overflow-hidden  ">
+                            <div className="w-full h-[200px] md:h-[300px] xl:h-[400px] relative order-1 xl:order-none rounded-2xl overflow-hidden  ">
                               <Image
                                 src={project.image}
                                 alt={project.title}
@@ -168,6 +181,15 @@ export default function Work() {
             })}
           </div>
         </Tabs>
+        <Link
+          href={"/contact"}
+          className="btn btn-lg btn-accent w-fit mx-auto mb-16 mt-6 xl:mt-18"
+        >
+          <div className="flex items-center gap-3">
+            <span>Let's talk</span>
+            <MdArrowOutward className="text-xl" />
+          </div>
+        </Link>
       </div>
     </motion.section>
   );

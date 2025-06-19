@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   BiLogoFacebook,
   BiLogoInstagram,
@@ -26,7 +27,7 @@ export default function Socials({ containerStyles, iconStyles }) {
   return (
     <div className={containerStyles}>
       {socials.map((item, index) => (
-        <div
+        <Link
           key={index}
           href={item.path}
           target="_blank"
@@ -35,7 +36,7 @@ export default function Socials({ containerStyles, iconStyles }) {
           aria-label={item.name}
         >
           {item.icon}
-        </div>
+        </Link>
       ))}
     </div>
   );

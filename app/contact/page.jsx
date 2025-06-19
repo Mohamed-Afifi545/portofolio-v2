@@ -14,6 +14,7 @@ import {
 
 import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
+import Socials from "@/_components/Socials";
 
 export default function Contact() {
   return (
@@ -64,6 +65,10 @@ export default function Contact() {
                   </span>
                   <span>Cairo, Egypt</span>
                 </div>
+                <Socials
+                  containerStyles="hidden xl:flex gap-4 z-40 w-max transform translate-x-[80px]"
+                  iconStyles="bg-accent text-white hover:bg-accent-hover transition w-[40px] h-[40px] flex items-center justify-center rounded-full text-[22px] shadow-md hover:shadow-lg cursor-pointer"
+                />
               </div>
             </div>
             <div className="flex-1">
@@ -117,6 +122,7 @@ export default function Contact() {
                     <SelectContent className="bg-black border-white/20">
                       <SelectItem value="webdev">Web Development</SelectItem>
                       <SelectItem value="uiux">UI & UX Design</SelectItem>
+                      <SelectItem value="video">Video Editing</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

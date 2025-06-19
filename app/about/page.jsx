@@ -41,8 +41,8 @@ export default function About() {
               <Blob containerStyles="w-[420px] h-[420px] " />
             </div>
             <Socials
-              containerStyles="flex gap-4 z-40 w-max transform translate-x-[70px]"
-              iconStyles="w-[48px] h-[48px] text-[22px] text-accent hover:text-accent-hover transition-all flex items-center justify-center rounded-full cursor-pointer "
+              containerStyles="flex gap-4 z-40 w-max transform translate-x-[80px]"
+              iconStyles="bg-accent text-white hover:bg-accent-hover transition w-[40px] h-[40px] flex items-center justify-center rounded-full text-[22px] shadow-md hover:shadow-lg cursor-pointer"
             />
           </div>
           <ScrollArea className="w-full h-[680px]">

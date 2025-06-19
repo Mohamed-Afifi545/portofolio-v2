@@ -8,31 +8,27 @@ import "swiper/css/pagination";
 
 import Image from "next/image";
 import { MdArrowRightAlt, MdOutlineArrowOutward } from "react-icons/md";
+import Link from "next/link";
 
 const services = [
   {
     icon: "/assets/services/design.svg",
-    href: "",
+    href: "/work",
     title: "Website Interface Design",
   },
   {
     icon: "/assets/services/frontend.svg",
-    href: "",
+    href: "/work",
     title: "Frontend Development",
   },
   {
-    icon: "/assets/services/backend.svg",
-    href: "",
-    title: "Backend Development",
-  },
-  {
     icon: "/assets/services/seo.svg",
-    href: "",
+    href: "/work",
     title: "Search Engine Optimization",
   },
   {
     icon: "/assets/services/video.svg",
-    href: "",
+    href: "/work",
     title: "Video Editing",
   },
 ];
@@ -59,9 +55,12 @@ export default function Services() {
             Custom <span className="text-accent">Web Solutions</span> To Boost
             Your Business
           </h2>
-          <button className=" btn btn-lg btn-accent flex gap-2 cursor-pointer">
+          <Link
+            href={"/work"}
+            className=" btn btn-lg btn-accent flex gap-2 cursor-pointer"
+          >
             All Services <MdArrowRightAlt className="text-2xl" />
-          </button>
+          </Link>
         </div>
         <Swiper
           spaceBetween={30}
@@ -89,11 +88,14 @@ export default function Services() {
                     width={48}
                     height={48}
                   />
-                  <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center cursor-pointer text-2xl hover:rotate-45 transition-all ">
+                  <Link
+                    href={"/contact"}
+                    className="w-12 h-12 bg-accent rounded-full flex items-center justify-center cursor-pointer text-2xl hover:rotate-45 transition-all "
+                  >
                     <MdOutlineArrowOutward />
-                  </div>
+                  </Link>
                 </div>
-                <h5 className="text-[22px] font-medium max-w-[240px]">
+                <h5 className="text-[22px] text-center font-medium max-w-[240px]">
                   {service.title}
                 </h5>
               </div>
