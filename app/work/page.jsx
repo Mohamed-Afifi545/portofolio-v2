@@ -118,13 +118,18 @@ export default function Work() {
               return (
                 <TabsContent key={category} value={category}>
                   <Swiper
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     pagination={{
                       clickable: true,
                       dynamicBullets: true,
                     }}
                     slidesPerView={1.1}
                     spaceBetween={20}
+                    autoplay={{
+                      delay: 2500,
+                      pauseOnMouseEnter: true,
+                    }}
+                    loop={true}
                     className="h-max xl:h-[460px] "
                   >
                     {projects
