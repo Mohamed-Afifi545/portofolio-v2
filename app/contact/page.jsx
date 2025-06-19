@@ -1,5 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -15,14 +18,31 @@ import {
 import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import Socials from "@/_components/Socials";
-import { useRouter } from "next/navigation";
 
 export default function Contact() {
   const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    router.push("/thankyou");
+    setLoading(true);
+    const form = e.target;
+    const data = new FormData(form);
+
+    const res = await fetch("https://formspree.io/f/xyzjprke", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    setLoading(false);
+    if (res.ok) {
+      router.push("/thankyou");
+    } else {
+      alert("Failed to send message.");
+    }
   }
 
   return (
