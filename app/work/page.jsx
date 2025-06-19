@@ -139,7 +139,7 @@ export default function Work() {
                           <div className="flex flex-col xl:flex-row gap-4 xl:gap-12 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
                             <div className="w-full max-w-[350px] flex flex-col gap-2 xl:gap-5 xl:pt-6 pl-6 pb-6 order-2 xl:order-none justify-between">
                               <h3 className="h3">{project.title}</h3>
-                              <div className="xl:mb-2 max-w-[300px] min-h-fit ">
+                              <div className="mb-2 xl:mb-2 max-w-[300px] min-h-fit ">
                                 <p className="mb-4">Technologies Used:</p>
                                 <ul className="flex flex-wrap gap-3 ">
                                   {project.tech.map((item, index) => {
@@ -154,16 +154,16 @@ export default function Work() {
                                   })}
                                 </ul>
                               </div>
-                              <div className="flex flex-col sm:flex-row gap-3 items-start ">
+                              <div className="flex flex-row gap-3 items-start ">
                                 <Link href={project.link} target="_blank">
-                                  <button className="btn btn-sm btn-accent flex gap-x-[5px] ">
-                                    <MdArrowOutward className="text-lg " />
+                                  <button className="btn btn-xs lg:btn-sm btn-accent flex gap-x-[5px] ">
+                                    <MdArrowOutward className="text-lg hidden lg:block " />
                                     <span>Live Project</span>
                                   </button>
                                 </Link>
                                 <Link href={project.github} target="_blank">
-                                  <button className="btn btn-sm btn-white flex gap-x-[5px] ">
-                                    <FaGithub className="text-lg " />
+                                  <button className="btn btn-xs lg:btn-sm btn-white flex gap-x-[5px] ">
+                                    <FaGithub className="text-lg hidden lg:block " />
                                     <span>Github Repo.</span>
                                   </button>
                                 </Link>

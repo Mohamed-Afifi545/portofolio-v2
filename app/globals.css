@@ -49,7 +49,7 @@ body {
 }
 
 .btn-xs {
-  @apply min-w-[80px] px-5 text-[15px] font-semibold;
+  @apply min-w-[80px] px-2 text-[15px] font-semibold;
 }
 .btn-sm {
   @apply min-w-[168px] px-5 text-[15px] font-semibold;
