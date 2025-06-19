@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${sometypeMono.variable} antialiased overflow-hidden relative min-h-[100dvh] `}
+        className={`${sometypeMono.variable} antialiased overflow-hidden relative `}
       >
         <Gradient />
         <RectangleTransition />
