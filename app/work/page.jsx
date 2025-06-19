@@ -113,7 +113,7 @@ export default function Work() {
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="h-max  xl:overflow-y-visible ">
+          <div className="h-max mb-10  xl:overflow-y-visible ">
             {categories.map((category) => {
               return (
                 <TabsContent key={category} value={category}>
