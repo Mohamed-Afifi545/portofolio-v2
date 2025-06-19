@@ -87,12 +87,12 @@ export default function Work() {
       animate={{
         opacity: 1,
         transition: {
-          delay: 2.4,
+          delay: 1,
           duration: 0.4,
           ease: "easeIn",
         },
       }}
-      className="min-h-screen flex items-center py-24 xl:py-0 "
+      className="h-screen flex items-center "
     >
       <div className="container mx-auto w-full h-full flex flex-col justify-center ">
         <h2 className="h2 mb-6 xl:mb-12 max-w-[600px] ">
@@ -181,15 +181,6 @@ export default function Work() {
             })}
           </div>
         </Tabs>
-        <Link
-          href={"/contact"}
-          className="btn btn-lg btn-accent w-fit mx-auto mb-16 mt-6 xl:mt-18"
-        >
-          <div className="flex items-center gap-3">
-            <span>Let's talk</span>
-            <MdArrowOutward className="text-xl" />
-          </div>
-        </Link>
       </div>
     </motion.section>
   );
