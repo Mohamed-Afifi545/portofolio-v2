@@ -61,7 +61,7 @@ export default function Contact() {
       className="h-screen flex items-center py-24 xl:py-0
        "
     >
-      <div className="container mx-auto w-full h-full flex flex-col items-center xl:justify-center xl:overflow-hidden scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible ">
+      <div className="container mx-auto w-full h-[90%] flex flex-col items-center xl:justify-center xl:overflow-hidden scrollbar scrollbar-thumb-accent scrollbar-track-accent/5 overflow-y-scroll xl:overflow-y-visible ">
         <div className="w-full">
           <div className="flex flex-col xl:flex-row gap-6 ">
             <div className="flex-1 xl:w-[600px] flex flex-col gap-12 ">
