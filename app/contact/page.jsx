@@ -15,6 +15,9 @@ import {
 import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import Socials from "@/_components/Socials";
+import { redirect } from "next/navigation";
+
+function handleSubmit({ formdata }) {}
 
 export default function Contact() {
   return (
@@ -72,7 +75,12 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex-1">
-              <form className="flex flex-col gap-6 items-start">
+              <form
+                action={redirect("/")}
+                name="contact"
+                netlify
+                className="flex flex-col gap-6 items-start"
+              >
                 <div className="flex flex-col xl:flex-row gap-6 w-full ">
                   <div className="w-full  ">
                     <Label htmlFor="name">
@@ -137,7 +145,7 @@ export default function Contact() {
                     className="min-h-[160px] bg-white/5 border-white/10 focus-visible:border-accent focus-visible:ring-accent focus-visible:ring-[1px] resize-none p-4 selection:bg-accent placeholder:text-white "
                   />
                 </div>
-                <button className="btn btn-lg btn-accent ">
+                <button type="submit" className="btn btn-lg btn-accent ">
                   <div className="flex items-center gap-3">
                     <span className="font-medium ">Send message</span>
                     <HiOutlineArrowLongRight className="text-xl" />
