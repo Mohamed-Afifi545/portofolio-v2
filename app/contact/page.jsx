@@ -85,7 +85,6 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 name="contact"
                 className="flex flex-col gap-6 items-start"
-                data-netlify="true"
               >
                 <div className="flex flex-col xl:flex-row gap-6 w-full ">
                   <div className="w-full  ">
