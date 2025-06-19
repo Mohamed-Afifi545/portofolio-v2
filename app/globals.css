@@ -47,6 +47,10 @@ body {
 .btn {
   @apply flex items-center justify-center rounded-full cursor-pointer transition-all font-medium h-[56px];
 }
+
+.btn-xs {
+  @apply min-w-[80px] px-5 text-[15px] font-semibold;
+}
 .btn-sm {
   @apply min-w-[168px] px-5 text-[15px] font-semibold;
 }
