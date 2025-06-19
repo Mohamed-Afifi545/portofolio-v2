@@ -45,7 +45,7 @@ export default function About() {
               iconStyles="bg-accent text-white hover:bg-accent-hover transition w-[40px] h-[40px] flex items-center justify-center rounded-full text-[22px] shadow-md hover:shadow-lg cursor-pointer"
             />
           </div>
-          <ScrollArea className="w-full h-[660px]">
+          <ScrollArea className="w-full mt-11 lg:mt-0 h-[600px]">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
