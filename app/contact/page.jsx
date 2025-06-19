@@ -53,7 +53,7 @@ export default function Contact() {
       animate={{
         opacity: 1,
         transition: {
-          delay: 1,
+          delay: 0.3,
           duration: 0.4,
           ease: "easeIn",
         },
