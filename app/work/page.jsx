@@ -95,14 +95,14 @@ export default function Work() {
       className="h-screen flex items-center "
     >
       <div className="container mx-auto w-full h-full flex flex-col justify-center ">
-        <h2 className="h2 mb-6 xl:mb-12 max-w-[600px] ">
+        <h2 className="h3 mb-5 xl:mb-12 max-w-[600px] ">
           My Latest <span className="text-accent">Projects</span>
         </h2>
         <Tabs
           defaultValue="Frontend"
           className="w-full flex flex-col gap-6 xl:gap-12 "
         >
-          <TabsList className="flex flex-wrap justify-center items-center gap-4 h-full mb-4 xl:mb-0">
+          <TabsList className="flex flex-wrap justify-center items-center gap-4 h-full mb-2 xl:mb-0">
             {categories.map((category) => (
               <TabsTrigger
                 key={category}
@@ -131,12 +131,12 @@ export default function Work() {
                       .filter((project) => project.category === category)
                       .map((project) => (
                         <SwiperSlide key={project.id} className="h-full">
-                          <div className="flex flex-col xl:flex-row gap-8 xl:gap-12 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
-                            <div className="w-full max-w-[350px] flex flex-col gap-3 xl:gap-5 xl:pt-6 pl-6 pb-6 order-2 xl:order-none justify-between">
+                          <div className="flex flex-col xl:flex-row gap-4 xl:gap-12 rounded-2xl border-2 border-accent/60 bg-secondary/80 shadow-lg transition-all duration-300 hover:border-accent">
+                            <div className="w-full max-w-[350px] flex flex-col gap-2 xl:gap-5 xl:pt-6 pl-6 pb-6 order-2 xl:order-none justify-between">
                               <h3 className="h3">{project.title}</h3>
-                              <div className="xl:mb-2 max-w-[300px] min-h-[130px] ">
+                              <div className="xl:mb-2 max-w-[300px] min-h-fit ">
                                 <p className="mb-4">Technologies Used:</p>
-                                <ul className="flex flex-wrap gap-4 ">
+                                <ul className="flex flex-wrap gap-3 ">
                                   {project.tech.map((item, index) => {
                                     return (
                                       <li
@@ -149,7 +149,7 @@ export default function Work() {
                                   })}
                                 </ul>
                               </div>
-                              <div className="flex flex-col sm:flex-row gap-4 items-start ">
+                              <div className="flex flex-col sm:flex-row gap-3 items-start ">
                                 <Link href={project.link} target="_blank">
                                   <button className="btn btn-sm btn-accent flex gap-x-[5px] ">
                                     <MdArrowOutward className="text-lg " />
@@ -164,7 +164,7 @@ export default function Work() {
                                 </Link>
                               </div>
                             </div>
-                            <div className="w-full h-[200px] md:h-[300px] xl:h-[400px] relative order-1 xl:order-none rounded-2xl overflow-hidden  ">
+                            <div className="w-full h-[150px] md:h-[300px] xl:h-[400px] relative order-1 xl:order-none rounded-2xl overflow-hidden  ">
                               <Image
                                 src={project.image}
                                 alt={project.title}
