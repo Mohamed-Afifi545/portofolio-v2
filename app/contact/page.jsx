@@ -15,9 +15,6 @@ import {
 import { HiOutlineMapPin, HiOutlineArrowLongRight } from "react-icons/hi2";
 import { HiOutlinePhone, HiOutlineMail } from "react-icons/hi";
 import Socials from "@/_components/Socials";
-import { redirect } from "next/navigation";
-
-function handleSubmit({ formdata }) {}
 
 export default function Contact() {
   return (
@@ -76,7 +73,6 @@ export default function Contact() {
             </div>
             <div className="flex-1">
               <form
-                action={redirect("/")}
                 name="contact"
                 netlify
                 className="flex flex-col gap-6 items-start"
